@@ -7,10 +7,10 @@ export default function SignupBase(props) {
       <TextInput>username</TextInput>
       <TextInput>password</TextInput>
       <TextInput>confirm password</TextInput>
+      <Button title="Signup" />
       <Button onPress={() =>
             props.navigation.navigate('LoginBase')
-          } title="Login" />
-      <Button title="Signup" />
+          } title="go to login" />
     </View>
   );
 }

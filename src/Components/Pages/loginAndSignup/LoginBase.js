@@ -9,7 +9,7 @@ export default function LoginBase(props) {
       <Button title="Login" />
       <Button onPress={() =>
             props.navigation.navigate('SignupBase')
-          } title="Signup" />
+          } title="go to signup" />
     </View>
   );
 }
