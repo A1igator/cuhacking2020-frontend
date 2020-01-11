@@ -49,8 +49,5 @@ const styles = StyleSheet.create({
     },
     activeTitle: {
       color: 'red',
-    },
-    categoryContainer: {
-        color: `${p => p.colour}`
     }
   });
