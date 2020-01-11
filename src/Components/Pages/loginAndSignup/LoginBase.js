@@ -10,7 +10,7 @@ export default function LoginBase(props) {
       <TextInput onChangeText={text => onChangeUsername(text)} value={username} />
       <TextInput onChangeText={text => onChangePassword(text)} value={password} />
       <Button onPress={() =>
-            props.navigation.navigate('BottomNav')
+            props.navigation.navigate('BottomNav', {jwt: 'xbx'})
           } title="Login" />
       <Button onPress={() =>
             props.navigation.navigate('SignupBase')
