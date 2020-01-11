@@ -7,13 +7,13 @@ export default function ProfilePage(props) {
         { name: 'Science', colour: 'red' },
         { name: 'English', colour: 'green' },
     ];
-    const dummyClasses = [
-        { name: 'COMP1005', colour: 'red', catName: 'Computer Science' }
-    ];
     const [add, setAdd] = useState(false);
-    const [name, setName] = useState("")
-    const [location, setLocation] = useState("")
-    const [classes, setClasses] = useState([])
+    const [name, setName] = useState("");
+    const [location, setLocation] = useState("");
+    const [credits, setCredits] = useState("");
+    const [classes, setClasses] = useState([
+      { name: 'COMP1005', colour: 'red', catName: 'Computer Science' }
+    ])
 
     useState(() => {
         console.log(props)
@@ -25,11 +25,12 @@ export default function ProfilePage(props) {
 
     return (
         <View style={styles.container}>
-            <Text>Name: </Text>
-            <Text>Location:</Text>
+            <Text>Name: {name}</Text>
+            <Text>Location: {location}</Text>
+            <Text>Credits: {credits}</Text>
             <Text>Classes you can tutor</Text>
             {
-                dummyClasses.map((ele, i) => {
+                classes.map((ele, i) => {
                     console.log(ele)
                     return <Classes name={ele.name} colour={ele.colour} catName={ele.catName} key = {i} />
                 })

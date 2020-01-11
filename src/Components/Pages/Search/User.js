@@ -7,6 +7,7 @@ export default function User(props) {
     <View style={styles.container}>
       <Text>{props.name}</Text>
       <Text>{props.klass}</Text>
+      <Text>{props.credits}</Text>
     </View>
   );
 }
