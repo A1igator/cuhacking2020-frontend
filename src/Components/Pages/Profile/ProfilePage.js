@@ -7,23 +7,26 @@ export default function ProfilePage(props) {
         {name: 'Science', colour: 'red'},
         {name: 'English', colour: 'green'},
     ];
-
     const dummyClasses = [
         {name: 'COMP1005', colour: 'red', catName: 'Computer Science'}
-    ]
+    ];
     const [add, setAdd] = useState(false);
+
+    useState(() => {
+        console.log(props)
+    })
     return (
         <View style = {styles.container}>
-            <Text>Name: {props.name}</Text>
-            <Text>Location: {props.location}</Text>
+            <Text>Name: </Text>
+            <Text>Location:</Text>
             <Text>Classes you can tutor</Text>
-            {
+            {/* {
                 dummyClasses.map((ele) => {
                     return <Classes name = {ele.name} colour = {ele.colour} catName = {ele.catName} />
                 })
-            }
+            } */}
             <Button title="+" onPress = {add ? () => {setAdd(false)} : () => {setAdd(true)}} />
-            {add ?
+            {/* {add ?
                 <View>
                     <TextInput>Name</TextInput>
                     <Text>Pick A Category:</Text>
@@ -34,7 +37,7 @@ export default function ProfilePage(props) {
                         </View>)
                     })}
                 </View>
-            : ''}
+            : ''} */}
         </View>
     );
 }
