@@ -6,6 +6,10 @@ export default function ProfilePage(props) {
     const dummyDataCat = [
         {name: 'Science', colour: 'red'},
         {name: 'English', colour: 'green'},
+    ];
+
+    const dummyClasses = [
+        {name: 'COMP1005', colour: 'red', catName: 'Computer Science'}
     ]
     const [add, setAdd] = useState(false);
     return (
@@ -14,7 +18,7 @@ export default function ProfilePage(props) {
             <Text>Location: {props.location}</Text>
             <Text>Classes you can tutor</Text>
             {
-                classes.map((ele) => {
+                dummyClasses.map((ele) => {
                     return <Classes name = {ele.name} colour = {ele.colour} catName = {ele.catName} />
                 })
             }
