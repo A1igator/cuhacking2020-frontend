@@ -7,7 +7,7 @@ import ProfilePage from './Pages/Profile/ProfilePage'
 const MainNavigator = createStackNavigator({
   LoginBase: { screen: LoginBase },
   SignupBase: { screen: SignupBase },
-  ProfilePage: {screen: ProfilePage }
+  ProfilePage: {screen: ProfilePage },
 });
 
 const AppNavigator = createAppContainer(MainNavigator);
