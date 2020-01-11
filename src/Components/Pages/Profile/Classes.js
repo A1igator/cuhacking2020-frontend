@@ -10,10 +10,7 @@ export default function Classes(props) {
     }
     
     return (
-        <View style = {() => {containerStyle(props.colour)}}>
-            <Text>{props.name}</Text>
-            <Text>{props.catName}</Text>
-        </View>
+        <View style = {() => {containerStyle(props.colour)}}><Text>{props.name}</Text><Text>{props.catName}</Text></View>
     );
 }
 
