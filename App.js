@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import LoginBase from './loginAndSignup/LoginBase';
+import SignupBase from './loginAndSignup/SignupBase';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <SignupBase />
     </View>
   );
 }
