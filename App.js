@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import LoginBase from './loginAndSignup/LoginBase';
-import SignupBase from './loginAndSignup/SignupBase';
+import LoginBase from './src/Components/Pages/loginAndSignup/LoginBase';
+import SignupBase from './src/Components/Pages/loginAndSignup/SignupBase';
 
 export default function App() {
   return (
