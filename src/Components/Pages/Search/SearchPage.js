@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, TextInput, Button, Picker, View } from 'react-native';
+import { StyleSheet, View, Picker } from 'react-native';
+import { Text, Button } from 'react-native-paper';
 import User from './User';
 
 export default function SearchPage() {
@@ -11,14 +12,13 @@ export default function SearchPage() {
       <Text>This is an app that allows students to help students.</Text>
       <Picker
         selectedValue={subject}
-        style={{height: 50, width: 100}}
         onValueChange={(itemValue, itemIndex) =>
           setSubject(itemValue)
         }>
         <Picker.Item label="English" value="english" />
         <Picker.Item label="Computer Science" value="cs" />
       </Picker>
-      <Button title = "Find A Tutor" />
+      <Button>Find A Tutor</Button>
       <View style={styles.containerRow}>
         <User name="test" klass="gaya01" credits={10}/>
         <User name="test2" klass="gaya02" credits={5}/>
@@ -37,4 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     flexDirection: 'row',
   },
+  picker: {
+    width: '100%',
+  }
 });

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { TextInput, Button } from 'react-native-paper';
 
 export default function SignupBase(props) {
   const [username, onChangeUsername] = useState('username');
@@ -11,10 +12,12 @@ export default function SignupBase(props) {
       <TextInput onChangeText={text => onChangeUsername(text)} value={username} />
       <TextInput onChangeText={text => onChangePassword(text)} value={password} />
       <TextInput onChangeText={text => {setCanSignup(text === password)}}>confirm password</TextInput>
-      <Button title="Signup" />
+      <Button>Signup</Button>
       <Button onPress={() =>
             props.navigation.navigate('LoginBase')
-          } title="go to login" />
+          }>
+      go to login
+      </Button>
     </View>
   );
 }
