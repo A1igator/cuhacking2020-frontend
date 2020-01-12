@@ -4,37 +4,47 @@ import { TextInput, Button } from 'react-native-paper';
 const axios = require('react-native-axios')
 
 export default function LoginBase(props) {
-  const [username, onChangeUsername] = useState('');
-  const [password, onChangePassword] = useState('');
+  const [username, onChangeUsername] = useState('user1');
+  const [password, onChangePassword] = useState('meme');
 
   const login = async () => {
+    // return props.navigation.replace('main', { jwt: 'xbx' })
     try {
-      // console.log("before login")
-      // let res = await fetch('http:// 172.17.76.76/login/', {
-      //   method: 'POST',
-      //   headers: {
-      //     Accept: 'application/json',
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({
-      //     username: username,
-      //     password: password,
-      //   }),
-      // });
-      console.log(res)
-      props.navigation.replace('main', { jwt: 'xbx' })
+      console.log("login start")
+      let jwt = await axios.post('https://cuhacking2020-server.appspot.com/login', 
+      {
+        username: username,
+        password: password
+      });
+      console.log("Stuff after")
+      console.log(jwt.data)
+      props.navigation.replace('main', {jwt: jwt.data.token})
     } catch (err) {
       console.log(err)
     }
   }
 
+  function getLoginString() {
+    return fetch('https://cuhacking2020-server.appspot.com/login', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    });
+  }
+
   return (
     <View style={styles.container}>
-      <Text style = {styles.title}>Welcome To Students Helping Students</Text>
+      <Text style={styles.title}>Welcome To Students Helping Students</Text>
       <TextInput style={styles.topTextInput} placeholder="username" onChangeText={text => onChangeUsername(text)} value={username} />
       <TextInput placeholder="password" onChangeText={text => onChangePassword(text)} value={password} />
       <View style={styles.buttonContainer}>
-        <Button style={styles.loginButton} onPress={() => { props.navigation.replace('main', { jwt: 'xbx' }) }}><Text style = {{fontSize: 25}}>Login</Text></Button>
+        <Button style={styles.loginButton} onPress={login}><Text style={{ fontSize: 25 }}>Login</Text></Button>
         <Button style={styles.switch} onPress={() =>
           props.navigation.navigate('signup')
         }>go to signup</Button>
