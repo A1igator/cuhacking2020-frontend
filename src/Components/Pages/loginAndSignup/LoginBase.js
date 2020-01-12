@@ -11,14 +11,16 @@ export default function LoginBase(props) {
     // return props.navigation.replace('main', { jwt: 'xbx' })
     try {
       console.log("login start")
-      let jwt = await axios.post('https://cuhacking2020-server.appspot.com/login', 
-      {
-        username: username,
-        password: password
-      });
+      let jwt = await axios.post('https://cuhacking2020-server.appspot.com/login',
+        {
+          username: username,
+          password: password
+        });
       console.log("Stuff after")
       console.log(jwt.data)
-      props.navigation.replace('main', {jwt: jwt.data.token})
+      if (jwt.data.token != undefined) {
+        props.navigation.replace('main', { jwt: jwt.data.token })
+      }
     } catch (err) {
       console.log(err)
     }
@@ -42,7 +44,7 @@ export default function LoginBase(props) {
     <View style={styles.container}>
       <Text style={styles.title}>Welcome To Students Helping Students</Text>
       <TextInput style={styles.topTextInput} placeholder="username" onChangeText={text => onChangeUsername(text)} value={username} />
-      <TextInput secureTextEntry = {true} placeholder="password" onChangeText={text => onChangePassword(text)} value={password} />
+      <TextInput secureTextEntry={true} placeholder="password" onChangeText={text => onChangePassword(text)} value={password} />
       <View style={styles.buttonContainer}>
         <Button style={styles.loginButton} onPress={login}><Text style={{ fontSize: 25 }}>Login</Text></Button>
         <Button style={styles.switch} onPress={() =>
