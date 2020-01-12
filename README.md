@@ -27,6 +27,9 @@ Then you will need to open terminal and type "expo start".
 You will be moved to a new page and you must scan the QR code with the expo app.
 <br>
 <br>
-<img src="images/5.png">
+<img src="images/5.jpg">
 <br>
 That is how to get onto StudentsHelpingStudents so go try it out for free!
+<br>
+The team is made up of William Trinh, Henry Morris, Chris Walker and Ali Abdoli.
+<a href="https://github.com/williamtriinh/cuhacking2020-server">Check out the backend/server which is also on github</a>
