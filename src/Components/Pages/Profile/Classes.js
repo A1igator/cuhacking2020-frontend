@@ -2,10 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function Classes(props) {
-    const containerStyle = (colour) => {
+    const containerStyle = () => {
         return {
             width: '45%',
-            backgroundColor: colour,
+            backgroundColor: 'red',
             paddingVertical: '5%',
             paddingHorizontal: '2.5%',
             marginBottom: '5%',
