@@ -1,6 +1,6 @@
-#Cuhacking2020
+#Cuhacking2020 made within 24 hours
 <br>
-Welcome to StudentsHelpingStudents
+Welcome to StudentsHelpingStudents 
 <br>
 <img src="images/logo.png" style="width: 75%; hieght: 75% ">
 <br>
@@ -27,9 +27,15 @@ Then you will need to open terminal and type "expo start".
 You will be moved to a new page and you must scan the QR code with the expo app.
 <br>
 <br>
-<img src="images/5.jpg">
+<img src="https://cdn.discordapp.com/attachments/664656923097956387/665963250168365075/Screenshot_20200112_120001_host.exp.exponent.jpg">
 <br>
-That is how to get onto StudentsHelpingStudents so go try it out for free!
+It will bring you to the app, sign in or log up and start finding new people.
+<br>
+<br>
+That is how to get onto StudentsHelpingStudents so go try it out for free! 
+<br>
+Have fun, learn something new, teach something and meet new people.
+<br>
 <br>
 <br>
 The team is made up of <a href="https://github.com/williamtriinh">William Trinh</a>, <a href="https://github.com/404UsernameNotFound404">Henry Morris<a>, <a href="https://github.com/A1igator">Chris Walker and <a href="https://github.com/A1igator">Ali Abdoli.<a>
