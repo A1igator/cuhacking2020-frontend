@@ -20,10 +20,10 @@ export default function SearchPage() {
       </Picker>
       <Button>Find A Tutor</Button>
       <View style={styles.containerRow}>
-        <User name="test" klass="gaya01" credits={10}/>
-        <User name="test2" klass="gaya02" credits={5}/>
-        <User name="test3" klass="gaya03" credits={3}/>
-        <User name="test4" klass="gaya04" credits={0}/>
+        <User name="test" klass="mata01" credits={10} email="test@gmail.com"/>
+        <User name="test2" klass="mata02" credits={5} email="test@gmail.com"/>
+        <User name="test3" klass="mata03" credits={3} email="test@gmail.com"/>
+        <User name="test4" klass="mata04" credits={0} email="test@gmail.com"/>
       </View>
     </View>
   );
