@@ -26,8 +26,23 @@ export default function ProfilePage(props) {
         console.log(props)
     })
 
-    const fetchAPI = () => {
-        //fetch for name and all that
+    const fetchAPI = async () => {
+      
+    }
+
+    const addClass = async (id, name) => {
+      let res = await fetch('https://cuhacking2020-server.appspot.com/addClassToUser', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          catID: id,
+          name,
+        }),
+      });
+      console.log(res);
     }
 
     const makeActive = (id) => {

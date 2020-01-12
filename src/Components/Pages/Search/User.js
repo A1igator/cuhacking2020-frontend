@@ -6,9 +6,12 @@ export default function User(props) {
   return (
     <View style={styles.container}>
       <Text style = {{color: 'grey'}}>Name: {props.name}</Text>
-      <Text style = {{color: 'grey'}}>Class: {props.klass}</Text>
-      <Text style = {{color: 'grey'}}>Cost: {props.credits}</Text>
       <Text style = {{color: 'grey'}}>Email: {props.email}</Text>
+      {props.klass != undefined ?
+        props.klass.map((ele) => {
+          return <Text>{ele}</Text>
+        }) : <Text></Text>
+      }
     </View>
   );
 }
