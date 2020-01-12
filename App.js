@@ -4,7 +4,7 @@ import AppNavigator from './src/Components/AppNavigator';
 
 export default function App() {
   return (
-    <AppNavigator />
+    <AppNavigator/>
   );
 }
 
