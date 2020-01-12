@@ -9,7 +9,6 @@ const MainNavigator = createStackNavigator({
   login: { screen: LoginBase },
   signup: { screen: SignupBase },
   main: {screen: BottomNav },
-  search: {screen: SearchPage}
 });
 
 const AppNavigator = createAppContainer(MainNavigator);
