@@ -6,6 +6,7 @@ const axios = require('react-native-axios')
 export default function LoginBase(props) {
   const [username, onChangeUsername] = useState('user1');
   const [password, onChangePassword] = useState('meme');
+  const [errorText, setErrorText] = useState('')
 
   const login = async () => {
     // return props.navigation.replace('main', { jwt: 'xbx' })
@@ -20,6 +21,8 @@ export default function LoginBase(props) {
       console.log(jwt.data)
       if (jwt.data.token != undefined) {
         props.navigation.replace('main', { jwt: jwt.data.token })
+      } else {
+        setErrorText("AHHHH WRONGF LOGIN IAJSDASD")
       }
     } catch (err) {
       console.log(err)
@@ -42,9 +45,11 @@ export default function LoginBase(props) {
 
   return (
     <View style={styles.container}>
+  
       <Text style={styles.title}>Welcome To Students Helping Students</Text>
-      <TextInput style={styles.topTextInput} placeholder="username" onChangeText={text => onChangeUsername(text)} value={username} />
-      <TextInput secureTextEntry={true} placeholder="password" onChangeText={text => onChangePassword(text)} value={password} />
+      <TextInput style={styles.topTextInput} placeholder="username" onChangeText={text => {setErrorText(''); onChangeUsername(text)}} value={username} />
+      <TextInput secureTextEntry={true} placeholder="password" onChangeText={text => {setErrorText(''); onChangePassword(text)}} value={password} />
+      <Text style = {{color: 'red', textAlign: 'center', marginTop: 10}}>{errorText}</Text>
       <View style={styles.buttonContainer}>
         <Button style={styles.loginButton} onPress={login}><Text style={{ fontSize: 25 }}>Login</Text></Button>
         <Button style={styles.switch} onPress={() =>
