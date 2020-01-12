@@ -14,7 +14,7 @@ export default function User(props) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FFF8DC',
+    backgroundColor: '#add8e6',
     width: '45%',
   },
 });
