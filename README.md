@@ -27,6 +27,6 @@ Then you will need to open terminal and type "expo start".
 You will be moved to a new page and you must scan the QR code with the expo app.
 <br>
 <br>
-<img src="https://cdn.discordapp.com/attachments/664656923097956387/665948543009423360/Screenshot_20200112-110131_Expo.jpg">
+<img src="https://cdn.discordapp.com/attachments/664656923097956387/665948543009423360/Screenshot_20200112-110131_Expo.jpg" style="height 50%; width=50%">
 <br>
 That is how to get onto StudentsHelpingStudents so go try it out for free!
