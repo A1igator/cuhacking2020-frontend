@@ -30,19 +30,15 @@ export default function ProfilePage(props) {
             <Text>Classes you can tutor</Text>
             {
                 dummyClasses.map((ele, i) => {
-                    console.log(ele)
                     return <Classes name={ele.name} colour={ele.colour} catName={ele.catName} key = {i} />
                 })
             }
             <Button title="+" onPress={add ? () => { setAdd(false) } : () => { setAdd(true) }} />
-            {console.log(add)}
             {add &&
                 <View>
                     <TextInput>Name</TextInput>
                     <Text>Pick A Category:</Text>
                     {dummyDataCat.map((ele) => {
-                        console.log("stuff")
-                        console.log(ele)
                         return (<View colour={ele.colour}><Text>{ele.name}</Text></View>)
                     })}
                 </View>
