@@ -14,8 +14,8 @@ export default function SignupBase(props) {
       <Text style={styles.title}>Ready To Learn?</Text>
       <Text style = {styles.title}>Ready To Teach?</Text>
       <TextInput placeholder = "Username" style={{ marginBottom: 10, marginTop: 20 }} onChangeText={text => onChangeUsername(text)} value={username} />
-      <TextInput placeholder = "Password" style={{ marginBottom: 10 }} onChangeText={text => onChangePassword(text)} value={password} />
-      <TextInput placeholder = "Confirm Password" style={{ marginBottom: 10 }} onChangeText={text => { setCanSignup(text === password) }}></TextInput>
+      <TextInput secureTextEntry = {true} placeholder = "Password" style={{ marginBottom: 10 }} onChangeText={text => onChangePassword(text)} value={password} />
+      <TextInput secureTextEntry = {true} placeholder = "Confirm Password" style={{ marginBottom: 10 }} onChangeText={text => { setCanSignup(text === password) }}></TextInput>
       <TextInput placeholder = "Email" style={{ marginBottom: 10 }} onChangeText={text => setEmail(text)} value={email} />
       <TextInput placeholder = "Name" style={{ marginBottom: 10 }} onChangeText={text => setName(text)} value={name} />
       <View style={styles.buttonContainer}>

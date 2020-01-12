@@ -5,13 +5,13 @@ import { Button } from 'react-native-paper';
 export default function Classes(props) {
     const containerStyle = (colour, active) => {
         console.log(colour)
-        let opacityValue = 0.5;
+        let opacityValue = 0.4;
         if (active) opacityValue = 1
         return {
             backgroundColor: colour,
             opacity: opacityValue,
             width: '40%',
-            height: '30%',
+            height: '50%',
             marginBottom: '5%',
             display: 'flex',
             justifyContent: 'center'

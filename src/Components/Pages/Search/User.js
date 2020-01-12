@@ -5,11 +5,11 @@ export default function User(props) {
 
   return (
     <View style={styles.container}>
-      <Text style = {{color: 'grey'}}>Name: {props.name}</Text>
-      <Text style = {{color: 'grey'}}>Email: {props.email}</Text>
+      <Text style = {{color: 'white'}}>Name: {props.name}</Text>
+      <Text style = {{color: 'white'}}>Email: {props.email}</Text>
       {props.klass != undefined ?
         props.klass.map((ele) => {
-          return <Text>{ele}</Text>
+          return <Text style = {{color: 'lightgrey'}}>{ele}</Text>
         }) : <Text></Text>
       }
     </View>
@@ -18,7 +18,7 @@ export default function User(props) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'lightblue',
+    backgroundColor: 'darkgreen',
     width: '45%',
     marginTop: '10%',
     padding: '2%'
