@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
+const axios = require('react-native-axios')
 
 export default function SignupBase(props) {
   const [username, onChangeUsername] = useState('');
@@ -8,6 +9,16 @@ export default function SignupBase(props) {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [canSignup, setCanSignup] = useState(false);
+
+  const signup = async () => {
+    let res = await axios.post("https://cuhacking2020-server.appspot.com/register", {
+      username: username,
+      name: name,
+      email: email,
+      password: password
+    })
+    console.log(res)
+  }
 
   return (
     <View style={styles.container}>
@@ -19,7 +30,7 @@ export default function SignupBase(props) {
       <TextInput placeholder = "Email" style={{ marginBottom: 10 }} onChangeText={text => setEmail(text)} value={email} />
       <TextInput placeholder = "Name" style={{ marginBottom: 10 }} onChangeText={text => setName(text)} value={name} />
       <View style={styles.buttonContainer}>
-        <Button style={styles.registerButton}><Text style={{ fontSize: 25 }}>Signup</Text></Button>
+        <Button onPress = {signup} style={styles.registerButton}><Text style={{ fontSize: 25 }}>Signup</Text></Button>
         <Button onPress={() =>
           props.navigation.navigate('login')
         }>
