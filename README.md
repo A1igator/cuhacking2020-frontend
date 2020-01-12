@@ -27,7 +27,7 @@ Then you will need to open terminal and type "expo start".
 You will be moved to a new page and you must scan the QR code with the expo app.
 <br>
 <br>
-<img src="https://cdn.discordapp.com/attachments/664656923097956387/665963250168365075/Screenshot_20200112_120001_host.exp.exponent.jpg">
+<img src="5.jpg">
 <br>
 It will bring you to the app, sign in or log up and start finding new people.
 <br>
