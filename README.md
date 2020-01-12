@@ -31,5 +31,7 @@ You will be moved to a new page and you must scan the QR code with the expo app.
 <br>
 That is how to get onto StudentsHelpingStudents so go try it out for free!
 <br>
-The team is made up of William Trinh, Henry Morris, Chris Walker and Ali Abdoli.
+<br>
+The team is made up of <a href="https://github.com/williamtriinh">William Trinh</a>, <a href="https://github.com/404UsernameNotFound404">Henry Morris<a>, <a href="https://github.com/A1igator">Chris Walker and <a href="https://github.com/A1igator">Ali Abdoli.<a>
+<br>
 <a href="https://github.com/williamtriinh/cuhacking2020-server">Check out the backend/server which is also on github</a>
