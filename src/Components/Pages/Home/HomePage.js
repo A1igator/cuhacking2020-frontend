@@ -8,7 +8,6 @@ export default function HomePage() {
       <Text style = {styles.mainTitle}>Welcome to</Text>
       <Text style = {styles.subTitle}>Students Helping Students</Text>
       <Text style = {styles.appDesc}>This is an app that allows students to help students.</Text>
-      <Button style = {styles.findTutorButton} onClick = {() => {props.navigation.replace('search'); console.log("test")}}><Text style = {styles.buttonText}>Find A Tutor</Text></Button>
     </View>
   );
 }
