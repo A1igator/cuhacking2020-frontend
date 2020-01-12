@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import Classes from './Classes'
-import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Text, TextInput, Button } from 'react-native-paper';
 
 export default function ProfilePage(props) {
     const dummyDataCat = [
         { name: 'Science', colour: 'red' },
         { name: 'English', colour: 'green' },
     ];
-    const dummyClasses = [
-        { name: 'COMP1005', colour: 'red', catName: 'Computer Science' }
-    ];
     const [add, setAdd] = useState(false);
-    const [name, setName] = useState("")
-    const [location, setLocation] = useState("")
-    const [classes, setClasses] = useState([])
+    const [name, setName] = useState("");
+    const [location, setLocation] = useState("");
+    const [credits, setCredits] = useState("");
+    const [classes, setClasses] = useState([
+      { name: 'COMP1005', colour: 'red', catName: 'Computer Science' }
+    ])
 
     useState(() => {
         console.log(props)
@@ -25,15 +26,18 @@ export default function ProfilePage(props) {
 
     return (
         <View style={styles.container}>
-            <Text>Name: </Text>
-            <Text>Location:</Text>
+            <Text>Name: {name}</Text>
+            <Text>Location: {location}</Text>
+            <Text>Credits: {credits}</Text>
             <Text>Classes you can tutor</Text>
             {
-                dummyClasses.map((ele, i) => {
+                classes.map((ele, i) => {
+                    console.log(ele)
                     return <Classes name={ele.name} colour={ele.colour} catName={ele.catName} key = {i} />
                 })
             }
-            <Button title="+" onPress={add ? () => { setAdd(false) } : () => { setAdd(true) }} />
+            <Button onPress={add ? () => { setAdd(false) } : () => { setAdd(true) }}>+</Button>
+            {console.log(add)}
             {add &&
                 <View>
                     <TextInput>Name</TextInput>

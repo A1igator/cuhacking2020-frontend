@@ -5,9 +5,9 @@ import SignupBase from './Pages/loginAndSignup/SignupBase';
 import BottomNav from './BottomNav';
 
 const MainNavigator = createStackNavigator({
-  LoginBase: { screen: LoginBase },
-  SignupBase: { screen: SignupBase },
-  BottomNav: {screen: BottomNav },
+  login: { screen: LoginBase },
+  signup: { screen: SignupBase },
+  main: {screen: BottomNav },
 });
 
 const AppNavigator = createAppContainer(MainNavigator);

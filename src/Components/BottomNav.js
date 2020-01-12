@@ -14,12 +14,16 @@ export default class BottomNav extends React.Component {
     ],
   };
 
+  homeRoute = () => <HomePage />;
+  profileRoute = () => <ProfilePage jwt={this.props.navigation.state.params.jwt}/>
+  searchRoute = () => <Search jwt={this.props.navigation.jwt}/>
+
   _handleIndexChange = index => this.setState({ index });
 
   _renderScene = BottomNavigation.SceneMap({
-    home: HomePage,
-    profile: ProfilePage,
-    search: Search,
+    home: this.homeRoute,
+    profile: this.profileRoute,
+    search: this.searchRoute,
   });
 
   render() {
