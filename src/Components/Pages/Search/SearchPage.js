@@ -4,26 +4,31 @@ import { Text, Button } from 'react-native-paper';
 import User from './User';
 
 export default function SearchPage() {
-  [subject, setSubject] = useState('english');
+  const [subject, setSubject] = useState('english');
+  const [classes, setClasses] = useState([
+    {name: "Henry", klass: "COMP1005", email:"email@email.ca", credits: 0},
+    {name: "Henry", klass: "COMP1006", email:"email@email.ca", credits: 0},
+    {name: "Edu I mean Chris", klass: "MATH1007", email:"email@email.ca", credits: 0}
+  ])
+
+  const fetchCategoryUsers = (itemValue, itemIndex) => {
+    //fetch new classes
+    setSubject(itemValue)
+  }
 
   return (
     <View>
-      <Text>Welcome to NAME____NAME</Text>
-      <Text>This is an app that allows students to help students.</Text>
+      <Text style = {{fontSize: 30, textAlign: 'center', marginVertical: '5%'}}>What are you looking for?</Text>
       <Picker
         selectedValue={subject}
-        onValueChange={(itemValue, itemIndex) =>
-          setSubject(itemValue)
-        }>
+        onValueChange={fetchCategoryUsers}>
         <Picker.Item label="English" value="english" />
         <Picker.Item label="Computer Science" value="cs" />
       </Picker>
-      <Button>Find A Tutor</Button>
       <View style={styles.containerRow}>
-        <User name="test" klass="mata01" credits={10} email="test@gmail.com"/>
-        <User name="test2" klass="mata02" credits={5} email="test@gmail.com"/>
-        <User name="test3" klass="mata03" credits={3} email="test@gmail.com"/>
-        <User name="test4" klass="mata04" credits={0} email="test@gmail.com"/>
+        {classes.map((ele, i) => {
+          return (<User key = {i} name = {ele.name} klass = {ele.klass} credits = {ele.credits} email = {ele.email} />)
+        })}
       </View>
     </View>
   );
