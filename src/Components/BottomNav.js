@@ -8,9 +8,9 @@ export default class BottomNav extends React.Component {
   state = {
     index: 0,
     routes: [
-      { key: 'home', title: 'Home', icon: 'queue-music' },
-      { key: 'profile', title: 'Profile', icon: 'album' },
-      { key: 'search', title: 'Search', icon: 'history' },
+      { key: 'home', title: 'Home', icon: 'home' },
+      { key: 'profile', title: 'Profile', icon: 'account' },
+      { key: 'search', title: 'Search', icon: 'magnify' },
     ],
   };
 
